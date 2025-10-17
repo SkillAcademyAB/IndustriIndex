@@ -12,6 +12,8 @@ Indexering av svenska regioner och kommuner i olika industriella dimensioner
 
 
 ## Use Git Flow model - branch names
-main - for our current code and for branching releases (prod)
-develop - for staging and acceptance testing
-feature/* - where * is the repo-name for the task for feature branches
+- `main` — production-ready code; release branches are created from here
+- `develop` — integration/staging branch
+- `feature/<ticket-id-or-short-description>` — feature branches off develop
+- `release/<version>` — preparation for production release (branched from develop, merged into main and back into develop)
+- `hotfix/<ticket-id-or-short-description>` — urgent fixes off main (merged into main and back into develop)
