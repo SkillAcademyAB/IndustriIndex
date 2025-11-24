@@ -127,7 +127,7 @@ export default [
         },
         rules: {
             //Curly braces on a new line (Allman-style). Built-in
-            //"brace-style": ["error", "allman"],
+            "brace-style": ["error", "allman"],
 
             //Parameter-prefix with underscore
             //Use our custom rule message instead of id-match
