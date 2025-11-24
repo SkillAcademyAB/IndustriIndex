@@ -94,7 +94,7 @@ export default [
             "prefer-const": "off", //Disable prefer-const
             "no-var": "off", //Disable no-var
             "custom/underscore-rule": "off",
-            "custom/brace-style": "off"
+            "custom/custom-brace-style": "off"
         }
     },
 
@@ -116,13 +116,13 @@ export default [
             }
         },
         rules: {
-            //Curly braces on a new line (Allman-style)
+            //Curly braces on a new line (Allman-style). Built-in
             "brace-style": ["error", "allman"],
 
             //Parameter-prefix with underscore
             //Use our custom rule message instead of id-match
             "custom/underscore-rule": "error",
-            "custom/brace-style": "error",
+            "custom/custom-brace-style": "error",
 
             //Additional useful rules
             "no-unused-vars": [
@@ -141,7 +141,7 @@ export default [
             custom: {
                 rules: {
                     "underscore-rule": underscoreRule,
-                    "brace-style": customBraceStyle
+                    "custom-brace-style": customBraceStyle
                 }
             }
         }
