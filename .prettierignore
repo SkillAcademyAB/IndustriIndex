@@ -3,3 +3,5 @@ dist/
 package-lock.json
 *.min.js
 coverage/ 
+.git/
+eslint.config.js 

@@ -11,25 +11,32 @@ const underscoreRule = {
                 "Parameters must start with an underscore. Example: _parameterName"
         }
     },
-    create(_context) {
+    create(_context) 
+    {
         return {
-            FunctionDeclaration(_node) {
+            FunctionDeclaration(_node) 
+            {
                 processParams(_node.params, _context)
             },
-            ArrowFunctionExpression(_node) {
+            ArrowFunctionExpression(_node) 
+            {
                 processParams(_node.params, _context)
             },
-            FunctionExpression(_node) {
+            FunctionExpression(_node) 
+            {
                 processParams(_node.params, _context)
             }
         }
 
-        function processParams(_params, _context) {
-            _params.forEach((_param) => {
-                if (
+        function processParams(_params, _context) 
+        {
+            _params.forEach((_param) => 
+            {
+                if(
                     _param.type === "Identifier" &&
                     !_param.name.startsWith("_")
-                ) {
+                ) 
+                {
                     _context.report({
                         node: _param,
                         messageId: "missingUnderscore"
@@ -49,17 +56,20 @@ export const customBraceStyle = {
             wrongBraceStyle: "Curly braces must be on a new line (Allman style)"
         }
     },
-    create(_context) {
+    create(_context) 
+    {
         return {
-            BlockStatement(_node) {
+            BlockStatement(_node) 
+            {
                 const sourceCode = _context.getSourceCode()
                 const openingBrace = sourceCode.getFirstToken(_node)
                 const previousToken = sourceCode.getTokenBefore(openingBrace)
 
-                if (
+                if(
                     previousToken &&
                     previousToken.loc.end.line === openingBrace.loc.start.line
-                ) {
+                ) 
+                {
                     _context.report({
                         node: openingBrace,
                         messageId: "wrongBraceStyle"

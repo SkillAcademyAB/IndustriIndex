@@ -5,7 +5,5 @@
     "trailingComma": "none",
     "bracketSpacing": false,
     "arrowParens": "always",
-    
-    //New line for braces (Allman/Stroustrup style)
-    "braceStyle": "allman"
+    "braceStyle": "stroustrup" 
 }
