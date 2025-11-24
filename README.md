@@ -5,13 +5,15 @@ An index describing swedish counties and municipalities according to different i
 - Manufacturing industry workforce as a percentage of the whole county or municipality total workforforce
 - Industrial investments for county or municipality.
 - Industrial potential - composite index:
-  - Number of engineers
-  - Number of technical trained from high school
-  - Attractivenes of technical educations - high school and college
-- Industrial diversification - number of industrial companies per capita or per manufactoring workforce persons. 
+    - Number of engineers
+    - Number of technical trained from high school
+    - Attractivenes of technical educations - high school and college
+- Industrial diversification - number of industrial companies per capita or per manufactoring workforce persons.
 
+## Install instructions
 
 ## Use Git Flow model - branch names
+
 - `main` — production-ready code; release branches are created from here
 - `develop` — integration/staging branch
 - `feature/<ticket-id-or-short-description>` — feature branches off develop

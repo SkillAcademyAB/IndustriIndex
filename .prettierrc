@@ -1,0 +1,9 @@
+{
+    "semi": false,
+    "singleQuote": false,
+    "tabWidth": 4,
+    "trailingComma": "none",
+    "bracketSpacing": false,
+    "arrowParens": "always",
+    "braceStyle": "stroustrup" 
+}
