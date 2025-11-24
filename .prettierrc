@@ -1,0 +1,11 @@
+{
+    "semi": false,
+    "singleQuote": false,
+    "tabWidth": 4,
+    "trailingComma": "none",
+    "bracketSpacing": false,
+    "arrowParens": "always",
+    
+    //Måsvingar på ny rad (Allman/Stroustrup style)
+    "braceStyle": "allman"
+}
