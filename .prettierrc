@@ -6,6 +6,6 @@
     "bracketSpacing": false,
     "arrowParens": "always",
     
-    //Måsvingar på ny rad (Allman/Stroustrup style)
+    //New line for braces (Allman/Stroustrup style)
     "braceStyle": "allman"
 }

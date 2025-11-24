@@ -1,7 +1,7 @@
 import js from "@eslint/js"
 import prettier from "eslint-config-prettier"
 
-//Custom rule för underscore med egna meddelanden
+//Custom rule for underscore with custom messages
 const underscoreRule = {
     meta: {
         fixable: "code",
@@ -33,7 +33,7 @@ const underscoreRule = {
                     _context.report({
                         node: _param,
                         messageId: "missingUnderscore"
-                        //Parameter-prefix med underscore (manuellt fixa)
+                        //Parameter prefix with underscore (manually fix)
                         /*fix(_fixer) 
                         {
                             return _fixer.replaceText(_param, `_${_param.name}`)
@@ -45,7 +45,7 @@ const underscoreRule = {
     }
 }
 
-//Custom rule för brace-style med custom message
+//Custom rule for brace-style with custom message
 export const customBraceStyle = {
     meta: {
         type: "layout",
@@ -77,7 +77,7 @@ export const customBraceStyle = {
 export default [
     //Global ignores
     {
-        //Ignorera filer (ersätter .eslintignore)
+        //Ignore files (replaces .eslintignore)
         ignores: [
             "node_modules/",
             "dist/",
@@ -90,26 +90,26 @@ export default [
         ]
     },
 
-    //CONFIG FILES - INGA underscore regler här!
+    //Config files - no underscore rules here!
     {
         files: ["**/eslint.config.js"],
         rules: {
-            //"id-match": "off",         //--> Stäng av underscore regeln för config filer
-            "no-unused-vars": "off", //Stäng av unused vars
-            "prefer-const": "off", //Stäng av prefer-const
-            "no-var": "off", //Stäng av no-var
+            //"id-match": "off",         //--> Disable underscore rules for config files
+            "no-unused-vars": "off", //Disable unused vars
+            "prefer-const": "off", //Disable prefer-const
+            "no-var": "off", //Disable no-var
             "custom/underscore-rule": "off",
             "custom/brace-style": "off"
         }
     },
 
-    //Grundkonfiguration
+    //Base configuration
     js.configs.recommended,
 
-    //Prettier config (måste vara sist)
+    //Prettier config (must be last)
     prettier,
 
-    //--> underscore regler aktiverade här!
+    //--> underscore rules enabled here!
     {
         files: ["**/*.js"],
         languageOptions: {
@@ -121,17 +121,15 @@ export default [
             }
         },
         rules: {
-            //Måsvingar på ny rad (Allman-style)
+            //Curly braces on a new line (Allman-style)
             "brace-style": ["error", "allman"],
 
-            //Parameter-prefix med underscore (Automatiskt fixa)
-            //"custom-rules/add-underscore": "error",
-            //Använd vår custom rule istället för id-match
+            //Parameter-prefix with underscore
+            //Use our custom rule message instead of id-match
             "custom/underscore-rule": "error",
             "custom/brace-style": "error",
 
-            //Parameter-prefix med underscore (manuellt fixa)
-            //ID-MATCH STÄNGS AV - vill inte ha underscore på variabler!
+            //ID-MATCH turned off - do not want underscores on variables!
             /*"id-match": ["error", "^_[a-zA-Z][a-zA-Z0-9]*$", {
                 properties: false, 
                 onlyDeclarations: true, //false,
@@ -139,7 +137,7 @@ export default [
                 //message: "Parameters must start with an underscore. Example: _parameterName"
             }],*/
 
-            //Ytterligare bra regler
+            //Additional useful rules
             "no-unused-vars": [
                 "error",
                 {
