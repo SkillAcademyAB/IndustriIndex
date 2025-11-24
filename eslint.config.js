@@ -90,7 +90,6 @@ export default [
     {
         files: ["**/eslint.config.js"],
         rules: {
-            //"id-match": "off",         //--> Disable underscore rules for config files
             "no-unused-vars": "off", //Disable unused vars
             "prefer-const": "off", //Disable prefer-const
             "no-var": "off", //Disable no-var
