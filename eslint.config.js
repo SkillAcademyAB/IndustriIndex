@@ -34,10 +34,6 @@ const underscoreRule = {
                         node: _param,
                         messageId: "missingUnderscore"
                         //Parameter prefix with underscore (manually fix)
-                        /*fix(_fixer) 
-                        {
-                            return _fixer.replaceText(_param, `_${_param.name}`)
-                        }*/
                     })
                 }
             })
@@ -128,14 +124,6 @@ export default [
             //Use our custom rule message instead of id-match
             "custom/underscore-rule": "error",
             "custom/brace-style": "error",
-
-            //ID-MATCH turned off - do not want underscores on variables!
-            /*"id-match": ["error", "^_[a-zA-Z][a-zA-Z0-9]*$", {
-                properties: false, 
-                onlyDeclarations: true, //false,
-                ignoreDestructuring: true,
-                //message: "Parameters must start with an underscore. Example: _parameterName"
-            }],*/
 
             //Additional useful rules
             "no-unused-vars": [
